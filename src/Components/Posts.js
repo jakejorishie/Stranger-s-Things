@@ -34,7 +34,6 @@ const navigateMessage = () => {
     <div>
         <input id="search-posts" placeholder="Search Posts" value={(searchTerm)} 
         onChange={event => {event.preventDefault(); console.log(event.target.value); setSearchTerm(event.target.value)}}/>
-        <button id="search-button" type="button">Search</button>
         <span>
         {isLoggedIn ? (
         <button id="new-post-button" onClick={navigateNew}>
