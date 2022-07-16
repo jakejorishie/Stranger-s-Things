@@ -1,0 +1,56 @@
+
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: purple;
+    color: whitesmoke;
+    padding: .5rem;
+    font-size: 1.5rem;
+}
+#nav-links {
+    display: flex;
+    flex-direction: row;
+    size: 1rem;
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+  #welcome {
+    text-align: center;
+  }
+  #welcome-title {
+    font-size: 3.5rem;
+  }
+  #home-title {
+    text-align: center;
+  }
+.postTitles {
+    padding: .5rem;
+    font-size: 1.5rem;
+}
+#price-box {
+  font-size: 1rem;
+}
+#post-box {
+ margin: 2rem; 
+}
+  span a {
+    padding: 0px 10px 0px 10px;
+    font-size: 20px;
+  }
+  
+  a {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    background-color: purple;
+    color: black;
+  }
+.btn-primary:hover {
+  color: black;
+  background-color: purple;
+}
+.btn-primary {
+  background-color: purple;
+}
