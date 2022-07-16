@@ -1,19 +1,21 @@
 import React, {useState, useEffect } from 'react';
 import {getUser} from "../api/api";
-const Home = ({ token }) => {
-const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+const Home = ({ isLoggedIn }) => {
+const [user, setUser] = useState("");
+console.log(user)
 useEffect(() => {
-    if (localStorage.getItem("token")) {
-        setIsLoggedIn(true);
-    }
-}, [token]);
+    getUser()
+            .then( results => {setUser(results) 
+                console.log(results)}).catch( error => console.error(error))
+}, []);
     return (
     <>
-    {isLoggedIn}
+    {isLoggedIn ? (
     <div>
-        <h2 id="home-title">Logged In As </h2>
+        <h2 id="home-title">Logged In As {user.data.username}</h2>
         </div>
+    ) : (<div></div>)
+}
     </>
     )
 }

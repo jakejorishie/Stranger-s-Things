@@ -26,7 +26,7 @@ function App() {
       <Routes>
       <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn}/>} />
       <Route path="/register" element={<Register setIsLoggedIn={setIsLoggedIn}/>} />
-      <Route path="/home" element={<Home />} />
+      <Route path="/home" element={<Home isLoggedIn={isLoggedIn}/>} />
       <Route path="/posts" element={<Posts isLoggedIn={isLoggedIn}/>} />
       <Route path="/newpost" element={<NewPost isLoggedIn={isLoggedIn}/>} />
       <Route path="/newmessage" element={<NewMessage isLoggedIn={isLoggedIn}/>} /> 
