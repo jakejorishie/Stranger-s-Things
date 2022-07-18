@@ -8,7 +8,7 @@ const NewPost = () => {
   const [price, setPrice] = useState("");
   const [location, setLocation] = useState("On Request");
   const [deliver, willDeliver] = useState(false);
-  const navigate= useNavigate();
+  const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
     const newPost = {
@@ -20,13 +20,14 @@ const NewPost = () => {
     };
     await createPosts(newPost);
     navigateNew();
-  }
+  };
 
   const navigateNew = () => {
     navigate("/posts");
-    };
+  };
   return (
     <div id="newPostBox">
+      <h1 id="new-post-header">Create New Post</h1>
       <form id="newPost" onSubmit={handleSubmit}>
         <label className="postTitles">Title:</label>
         <br />
@@ -34,7 +35,7 @@ const NewPost = () => {
           onChange={(event) => {
             setTitle(event.target.value);
           }}
-          size={'58'}
+          size={"58"}
           minLength={1}
           type="text"
           title="title"
@@ -45,10 +46,10 @@ const NewPost = () => {
         <label className="postTitles">Description:</label>
         <br />
         <input
-        size={'58'}
-        minLength={1}
-        id="descriptionID"
-        onChange={(event) => {
+          size={"58"}
+          minLength={1}
+          id="descriptionID"
+          onChange={(event) => {
             setDescription(event.target.value);
           }}
           type="text"
@@ -62,7 +63,7 @@ const NewPost = () => {
         <input
           placeholder="$"
           id="price-box"
-          size={'5'}
+          size={"5"}
           className="postTitles"
           onChange={(event) => {
             setPrice(event.target.value);
@@ -76,8 +77,8 @@ const NewPost = () => {
         <label className="postTitles">Location:</label>
         <br />
         <input
-        size={'58'}
-        minLength={1}
+          size={"58"}
+          minLength={1}
           type="text"
           placeholder="Location"
           value={location}
@@ -88,8 +89,7 @@ const NewPost = () => {
             id="checkbox"
             className="postTitles"
             onChange={(event) => {
-              willDeliver(event.target.checked)
-              console.log(event.target.checked);
+              willDeliver(event.target.checked);
             }}
             type="checkbox"
             name="delivery"
@@ -97,7 +97,7 @@ const NewPost = () => {
           />
           Will Deliver
         </div>
-        <button className="submitPost" type="submit">
+        <button className="m-button" type="submit">
           Submit Post
         </button>
       </form>
